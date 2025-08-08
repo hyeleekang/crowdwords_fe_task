@@ -58,4 +58,8 @@ export default defineConfig({
         },
     },
     assetsInclude: ['**/*.worker.js'],
+    define: {
+        global: 'globalThis',
+    },
+    publicDir: 'public',
 });
