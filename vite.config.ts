@@ -45,4 +45,17 @@ export default defineConfig({
     server: {
         port: 3000,
     },
+    optimizeDeps: {
+        include: ['react-pdf'],
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-pdf': ['react-pdf'],
+                },
+            },
+        },
+    },
+    assetsInclude: ['**/*.worker.js'],
 });
